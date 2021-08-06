@@ -1,0 +1,7 @@
+MaxPropellant=:GasNetworkMaxResource MaxFuel=300000
+MaxBattery=10000 MaxRadiator=2100
+P=:GasNetworkStoredResource/(MaxPropellant*10)*1000
+F=:StoredRawFuel/(MaxFuel*10)*1000
+B=:StoredBatteryPower/(MaxBattery*10)*1000
+C=:StoredRadiatorCoolant/(MaxRadiator*10)*1000
+:Res="\nProp: "+P+"%\nFuel: "+F+"%\nBatt: "+B+"%\nCool: "+C+"%" goto3
