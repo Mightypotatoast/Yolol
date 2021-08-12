@@ -1,5 +1,7 @@
+// Script qui affiche les ressources restante sur l'écran "Res" 
+MaxBattery=10000 MaxProp=4 MaxRods=2400000 MaxCool=1200
+F=:FuelRods/(MaxRods*10)*1000
 P=:Propellant/(:PropellantMax*10)*1000
-F=:StoredRawFuel/(MaxFuel*10)*1000
 B=:Battery/(:MaxBatteryPower*10)*1000
-C=:StoredRadiatorCoolant/(MaxRadiatorCoolant*10)*1000
-:Res="\nProp: "+P+"%\nFuel: "+F+"%\nBatt: "+B+"%\nCool: "+C+"%" goto3
+C=:StoredradiatorCoolant/(:MaxRadiatorCoolant*10)*1000
+:Res="\nProp: "+P+"%\nRods: "+F+"%\nBatt: "+B+"%\nCool: "+C+"%" goto1
