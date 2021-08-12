@@ -1,0 +1,4 @@
+:dr=1.92/ABS(COS(:RY)) dw=SQRT(:dr^2 -1.92^2)
+b=(90-:RY) IF b>90 THEN GOTO4 ELSE GOTO3 END
+:wr=3.24-dw :wl=3.24+dw GOTO1
+:wr=3.24+dw :wl=3.24-dw GOTO1

@@ -1,0 +1,5 @@
+P=:Propellant/(:PropellantMax*10)*1000
+F=:StoredRawFuel/(MaxFuel*10)*1000
+B=:Battery/(:MaxBatteryPower*10)*1000
+C=:StoredRadiatorCoolant/(MaxRadiatorCoolant*10)*1000
+:Res="\nProp: "+P+"%\nFuel: "+F+"%\nBatt: "+B+"%\nCool: "+C+"%" goto3

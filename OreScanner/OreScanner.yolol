@@ -1,0 +1,7 @@
+if:Scanner==1thenI=0 goto2end goto1
+:Scan=1 :C=5 :LastScan="Scanning" SM="" SV=""
+if:R==0then:LastScan="No results" goto1end :LastScan=""
+if:R>I then:I=I SM=:M+" \n" i++ goto5end goto7
+SV=:V+"kv \n "+:V/1728+"stk\n"
+:LastScan=:LastScan+SM-" Ore"-" Crystals"+" "+SV goto4
+:Scanner=0 :Scan=0 :Restet=1 goto1

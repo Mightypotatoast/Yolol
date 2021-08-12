@@ -1,0 +1,3 @@
+r=:Distance+:dr+.72 b=(90+:RY)
+e=SQRT((r^2 + :wr^2) -(2*r*:wr * COS(b)))
+:LPR=90-ACOS((r^2 -e^2 -:wr^2)/(-2*e*:wr)) GOTO1

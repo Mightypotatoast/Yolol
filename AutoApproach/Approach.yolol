@@ -1,0 +1,17 @@
+// script d'approche automatique d'un objet ciblé par un laser
+done=0 dir=0 :MidSearchLength=0 od=0 d=0 :RangeFinderMid=0
+if:Approach==0thengoto1end :RangeFinderMid=1 :MidSearchLength=500
+d=:RangeMid ifd!=500thengoto6end
+:FcuForward=0 :FcuBackward=0 goto3
+ifd>13 and d<18thengoto9end
+done=0 cd=16-d dx=od-cd od=cd adj=-(cd-5*dx) goto15
+
+:FcuForward=0 :FcuBackward=0
+done++ ifdone>10then:Approach=0end
+goto2*:Approach+2
+
+
+
+ifadj>d thenadj=d end :FcuForward=0 :FcuBackward=0
+ifadj<0then:FcuBackward=-adj*5else:FcuForward=adj*0.1end
+if:Approach thengoto4elsegoto9end
